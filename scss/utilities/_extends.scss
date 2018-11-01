@@ -1,0 +1,15 @@
+// ======================================
+//  Extends
+// ======================================
+
+// Navigation
+a {
+  text-decoration: none;
+  @include font('reg', 'prim');
+}
+
+// Buttons
+col {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+}

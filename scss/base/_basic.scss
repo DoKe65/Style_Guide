@@ -1,0 +1,16 @@
+// ======================================
+//  Basic Styles
+// ======================================
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+ul {
+  @include flex($dir: column);
+  text-align: center;
+}

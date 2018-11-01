@@ -1,0 +1,15 @@
+// ======================================
+//  Navigation
+// ======================================
+
+.nav__item {
+  @include cols(null);
+  @extend a;
+  @extend col;
+  &:first-of-type {
+    background-color: map-get($colours, 'sec');
+    & a {
+      color: map-get($colours, 'white');
+    }
+  }
+}

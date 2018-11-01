@@ -1,0 +1,26 @@
+// ======================================
+//  Typography
+// ======================================
+
+.container {
+  @include font('reg');
+}
+
+.link {
+  @include font('reg', 'link');
+}
+
+.blockquote {
+  @include quote();
+  @include font('reg', 'prim', 1.5em);
+  font-style: italic;
+}
+
+.headline--primary {
+  @include font('bold', 'sec', 2em);
+  margin-left: $indent;
+}
+
+.headline--secondary {
+  @include font('lt');
+}

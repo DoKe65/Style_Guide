@@ -1,0 +1,41 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,400i,700');
+$font-primary: Nunito, sans-serif;
+$fontweight: (
+  'lt': 300,
+  'reg': 400,
+  'regi': 400,
+  'bold': 700
+);
+
+// Colours
+$colours: (
+  'prim': #878787,
+  'sec': #80E8D1,
+  'link': #51DDFC,
+  'success': #63CC82,
+  'error': #E4757A,
+  'warning': #FD7856,
+  'info': #927BC1,
+  'grid3': #DEB2EE,
+  'grid4': #7EE6FD,
+  'grid5': #88D9A0,
+  'grid6': #3FABCA,
+  'grid7': #EC9FA3,
+  'grid8': #FD9F85,
+  'white': #fff
+);
+
+// Breakpoints
+$breakpoints: (
+  'mobile': 480px,
+  'large': 768px,
+);
+
+// sizes and positions
+$col-height: 3em;
+$indent: 0.5em;

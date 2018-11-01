@@ -1,0 +1,55 @@
+// ======================================
+//  Mixins
+// ======================================
+
+// Media Queries
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+  $mobile: map-get($breakpoints, 'mobile');
+
+    @if $value == null {
+      @error "'#{$break}' is not a valid breakpoint name.";
+    }
+    @else if $value > $mobile {
+      @media (min-width: $value) {
+        @content;
+      }
+    }
+    @else {
+      @content;
+    }
+}
+
+// Fonts
+@mixin font($fontstyle, $color: 'prim', $size: 1.1em) {
+  font-family: $font-primary;
+  font-weight: map-get($fontweight, $fontstyle);
+  color: map-get($colours, $color);
+  font-size: $size;
+}
+
+// Flexboxes
+@mixin flex(
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+}
+
+// Buttons and Shapes
+@mixin cols($color, $border: 5px) {
+  background-color: map-get($colours, $color);
+  line-height: $col-height;
+  border-radius: $border;
+}
+
+// Quotes
+@mixin quote() {
+  border-left: 3px;
+  border-radius: 3px;
+  border-color: map-get($colours, 'sec');
+}
