@@ -3,39 +3,106 @@
 // ======================================
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,400i,700');
-$font-primary: Nunito, sans-serif;
+$font-url--google: 'https://fonts.googleapis.com/css?family=Nunito:300,300i,400,700';
+$font-family--primary: Nunito, "Helvetica Neue", Helvetica, Arial, sans-serif ;
+
 $fontweight: (
   'lt': 300,
   'reg': 400,
-  'regi': 400,
   'bold': 700
 );
 
 // Colours
-$colours: (
-  'prim': #878787,
-  'sec': #80E8D1,
-  'link': #51DDFC,
-  'success': #63CC82,
-  'error': #E4757A,
-  'warning': #FD7856,
-  'info': #927BC1,
-  'grid3': #DEB2EE,
-  'grid4': #7EE6FD,
-  'grid5': #88D9A0,
-  'grid6': #3FABCA,
-  'grid7': #EC9FA3,
-  'grid8': #FD9F85,
-  'white': #fff
+$white: #fff;
+$grey: #787878;
+$riptide: #80E8D1;
+$malibu: #51DDFC;
+$emerald: #63CC82;
+$sunglo: #E4757A;
+$coral: #FD7856;
+$purple-majesty: #927BC1;
+$french-lilac: #DEB2EE;
+$anakiwa: #7EE6FD;
+$vista-blue: #88D9A0;
+$shakespeare: #3FABCA;
+$sea-pink: #EC9FA3;
+$vivid-tangerine: #FD9F85;
+
+// Color Usage
+$color-primary: $riptide;
+$color-secondary: $malibu;
+
+// UI Colors
+$color-themes: (
+  default: $malibu,
+  success: $emerald,
+  error: $sunglo,
+  warning: $coral,
+  info: $purple-majesty,
+  3: $french-lilac,
+  4: $anakiwa,
+  5: $vista-blue,
+  6: $shakespeare,
+  7: $sea-pink,
+  8: $vivid-tangerine,
+  12: $riptide
 );
+
+// Text
+$base__font-size: 16px;
+$base__line: 24px;
+
+//old
+
+// $colours: (
+//   'prim': #787878,
+//   'sec': #80E8D1,
+//   'link': #51DDFC,
+//   'success': #63CC82,
+//   'error': #E4757A,
+//   'warning': #FD7856,
+//   'info': #927BC1,
+//   'white': #fff
+// );
+//
+// // colour-themes
+// $colour-themes: (
+// 'grid__col--3': #DEB2EE,
+// 'grid__col--4': #7EE6FD,
+// 'grid__col--5': #88D9A0,
+// 'grid__col--6': #3FABCA,
+// 'grid__col--7': #EC9FA3,
+// 'grid__col--8': #FD9F85,
+// 'grid__col--12': #80E8D1, //same as default (riptide)
+// 'btn--default': map-get($colours, 'link'),
+// 'btn--success': map-get($colours, 'success'),
+// 'btn--error': map-get($colours, 'error'),
+// 'btn--warning': map-get($colours, 'warning'),
+// 'btn--info': map-get($colours, 'info')
+// );
+//
+// // Buttons
+// $buttons: (
+// 'btn--default': map-get($colours, 'link'),
+// 'btn--success': map-get($colours, 'success'),
+// 'btn--error': map-get($colours, 'error'),
+// 'btn--warning': map-get($colours, 'warning'),
+// 'btn--info': map-get($colours, 'info')
+// );
 
 // Breakpoints
 $breakpoints: (
   'mobile': 480px,
-  'large': 768px,
+  'desktop': 768px,
+);
+
+// border-radius
+$borders: (
+  'quote': border-left,
+  'input': border-bottom
 );
 
 // sizes and positions
 $col-height: 3em;
-$indent: 0.5em;
+$indent: 0.7em;
+$max_width: 1400px;

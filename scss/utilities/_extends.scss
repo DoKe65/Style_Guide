@@ -5,11 +5,23 @@
 // Navigation
 a {
   text-decoration: none;
-  @include font('reg', 'prim');
+  @include font('reg', $grey);
 }
 
 // Buttons
 col {
-  margin-left: -0.5em;
-  margin-right: -0.5em;
+  margin-left: -$indent;
+  margin-right: -$indent;
+}
+
+card {
+  margin: -$indent;
+}
+
+.grid__col {
+   @include grid-color($color-themes);
+}
+
+img .img--logo {
+
 }

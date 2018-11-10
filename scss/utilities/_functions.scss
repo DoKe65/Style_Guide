@@ -1,3 +1,19 @@
 // ======================================
 //  Functions
 // ======================================
+
+// Import Google Font
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+@function em($target, $context: $base__font-size) {
+  @return ($target / $context) * 1em;
+}
+
+
+// cols
+@function col-width($col) {
+  @return (12/10*$col);
+}
+// Buttons

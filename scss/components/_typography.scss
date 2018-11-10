@@ -7,20 +7,29 @@
 }
 
 .link {
-  @include font('reg', 'link');
+  @include font('reg', $color_secondary);
 }
 
 .blockquote {
-  @include quote();
-  @include font('reg', 'prim', 1.5em);
+  @include border('quote');
+  @include font($fontstyle: 'lt', $size: 1.4em);
   font-style: italic;
+  margin-left: ($indent * 2);
 }
 
 .headline--primary {
-  @include font('bold', 'sec', 2em);
+  @include font('bold', $color-primary, 2em);
   margin-left: $indent;
+  margin-bottom: $indent * 2;
+  line-height: 1em;
 }
 
 .headline--secondary {
   @include font('lt');
+  align-self: flex-start;
+  margin-top: $indent * 3;
+  .card &,
+  form & {
+    margin-left: $indent;
+  }
 }

@@ -3,9 +3,28 @@
 // ======================================
 
 .img--logo {
-  margin-bottom: 2em;
-  align-self: center;
-  justify-content: center;
+  width: 100%;
+  margin: 0 auto 2em auto;
+  padding: 0 30%;
+
+    @include mq('desktop') {
+      height: 50%;
+      width: auto;
+      padding-left: 0;
+  }
 }
-// .img--frame
-// .img--avatar
+
+.img--frame {
+  border: 1px solid $grey;
+  padding: $indent;
+  margin-bottom: $indent;
+}
+
+.img--avatar {
+  display: block;
+  margin: auto;
+  padding: 1em 0 2em 0;
+  @include mq('desktop') {
+      width: 60%;
+  }
+}

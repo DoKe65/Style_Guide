@@ -3,6 +3,34 @@
 // ======================================
 
 
-// .form
-// .form__label--hidden
-// .form__input
+.form {
+  display: block;
+  & .btn--default {
+    @include cols($color_secondary);
+    width: 100%;
+    color: $white;
+    margin-bottom: $indent;
+  }
+  @include mq('desktop') {
+    width: 333px;
+    flex-grow: 2;
+    margin-left: $indent*6;
+  }
+}
+.form__label--hidden {
+  display: none;
+}
+
+.form__input {
+  @include border('input');
+  display: block;
+  &:last-of-type {
+    margin-bottom: $indent * 2;
+  }
+  @include mq('desktop') {
+    margin-top: -$indent;
+    &:last-of-type {
+      margin-bottom: $indent/2;
+    }
+  }
+}

@@ -21,10 +21,10 @@
 }
 
 // Fonts
-@mixin font($fontstyle, $color: 'prim', $size: 1.1em) {
-  font-family: $font-primary;
+@mixin font($fontstyle, $color: $grey, $size: $base__font-size) {
+  font-family: $font-family--primary;
   font-weight: map-get($fontweight, $fontstyle);
-  color: map-get($colours, $color);
+  color: $color;
   font-size: $size;
 }
 
@@ -33,23 +33,72 @@
   $disp: flex,
   $dir: null,
   $wrap: null,
-  $just: null) {
+  $just: null,
+  $algn: null) {
   display: $disp;
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $just;
+  align-items: $algn;
 }
 
-// Buttons and Shapes
+// Grids mixin mit for um die breite mit hilfe von der funktion col-width zu berechnen
+
+// Buttons, Borders and Shapes
 @mixin cols($color, $border: 5px) {
-  background-color: map-get($colours, $color);
-  line-height: $col-height;
+  background-color: $color;
   border-radius: $border;
+  @include mq('mobile') {
+    line-height: $col-height * 1.2;
+  }
+  @include mq('desktop') {
+    line-height: $col-height * .8;
+    }
 }
 
-// Quotes
-@mixin quote() {
-  border-left: 3px;
-  border-radius: 3px;
-  border-color: map-get($colours, 'sec');
+@mixin btn-color($map) {
+  @each $theme, $color in $map {
+    .btn--#{$theme} {
+      background-color: $color;
+      height: $col-height;
+      border-radius: 5px;
+      color: $white;
+      text-transform: uppercase;
+      margin: $indent 0;
+    }
+  }
+}
+
+@mixin grid-color($map) {
+  @each $theme, $color in $map {
+    .grid__col--#{$theme} {
+      background-color: $color;
+      height: $col-height;
+      border-radius: 5px;
+      padding: $indent;
+      margin: $indent 0;
+    }
+  }
+}
+
+@mixin border($border) {
+  $value: map-get($borders, $border);
+  $quote: map-get($borders, 'quote');
+  @if $value == $quote {
+    border-left: 8px solid $color_primary;
+    border-radius: 5px;
+    margin-bottom: 3em;
+    padding-left: $indent;
+  } @else {
+    border-bottom: 6px solid $color_primary;
+    margin-bottom: 3em;
+    margin-right: auto;
+    margin-left: auto;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-bottom: $indent;
+    padding-left: $indent;
+    width: 96%;
+  }
 }
