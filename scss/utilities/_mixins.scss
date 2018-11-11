@@ -43,6 +43,13 @@
 }
 
 // Grids mixin mit for um die breite mit hilfe von der funktion col-width zu berechnen
+@mixin grid-width() {
+  @for $i from 2 through 12 {
+    .grid__col--#{$i} {
+      width: col-width($i);
+    }
+  }
+}
 
 // Buttons, Borders and Shapes
 @mixin cols($color, $border: 5px) {
@@ -62,9 +69,14 @@
       background-color: $color;
       height: $col-height;
       border-radius: 5px;
+      border-color: $color;
       color: $white;
       text-transform: uppercase;
       margin: $indent 0;
+      @include mq('desktop') {
+        width: col-width(5);
+        margin-left: $indent*4;
+      }
     }
   }
 }
@@ -77,6 +89,12 @@
       border-radius: 5px;
       padding: $indent;
       margin: $indent 0;
+      @include mq('desktop') {
+        margin: $indent/2;
+        &.centered {
+          margin: auto;
+        }
+      }
     }
   }
 }

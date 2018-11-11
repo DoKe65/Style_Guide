@@ -10,11 +10,11 @@
     width: 100%;
     color: $white;
     margin-bottom: $indent;
+    margin-left: 0;
   }
   @include mq('desktop') {
     width: 333px;
     flex-grow: 2;
-    margin-left: $indent*6;
   }
 }
 .form__label--hidden {

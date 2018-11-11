@@ -2,26 +2,12 @@
 //  Extends
 // ======================================
 
-// Navigation
-a {
-  text-decoration: none;
-  @include font('reg', $grey);
-}
-
 // Buttons
 col {
   margin-left: -$indent;
   margin-right: -$indent;
 }
 
-card {
-  margin: -$indent;
-}
-
 .grid__col {
    @include grid-color($color-themes);
-}
-
-img .img--logo {
-
 }

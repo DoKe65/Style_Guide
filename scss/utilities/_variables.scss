@@ -52,44 +52,6 @@ $color-themes: (
 $base__font-size: 16px;
 $base__line: 24px;
 
-//old
-
-// $colours: (
-//   'prim': #787878,
-//   'sec': #80E8D1,
-//   'link': #51DDFC,
-//   'success': #63CC82,
-//   'error': #E4757A,
-//   'warning': #FD7856,
-//   'info': #927BC1,
-//   'white': #fff
-// );
-//
-// // colour-themes
-// $colour-themes: (
-// 'grid__col--3': #DEB2EE,
-// 'grid__col--4': #7EE6FD,
-// 'grid__col--5': #88D9A0,
-// 'grid__col--6': #3FABCA,
-// 'grid__col--7': #EC9FA3,
-// 'grid__col--8': #FD9F85,
-// 'grid__col--12': #80E8D1, //same as default (riptide)
-// 'btn--default': map-get($colours, 'link'),
-// 'btn--success': map-get($colours, 'success'),
-// 'btn--error': map-get($colours, 'error'),
-// 'btn--warning': map-get($colours, 'warning'),
-// 'btn--info': map-get($colours, 'info')
-// );
-//
-// // Buttons
-// $buttons: (
-// 'btn--default': map-get($colours, 'link'),
-// 'btn--success': map-get($colours, 'success'),
-// 'btn--error': map-get($colours, 'error'),
-// 'btn--warning': map-get($colours, 'warning'),
-// 'btn--info': map-get($colours, 'info')
-// );
-
 // Breakpoints
 $breakpoints: (
   'mobile': 480px,
@@ -105,4 +67,3 @@ $borders: (
 // sizes and positions
 $col-height: 3em;
 $indent: 0.7em;
-$max_width: 1400px;

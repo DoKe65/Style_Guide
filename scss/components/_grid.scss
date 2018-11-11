@@ -24,6 +24,10 @@
   @include flex($dir: column);
   margin-top: 1.5em;
   margin-bottom: 1.5em;
+    & ul {
+      @include flex($dir: column);
+      text-align: center;
+    }
   @include btn-color($color-themes);
     &:nth-of-type(1n+6) {
   @include grid-color($color-themes);
@@ -34,8 +38,14 @@
   @include mq('desktop') {
     @include flex($dir: row, $just: space-between);
     width: 100%;
+    @for $i from 2 through 12 {
+      @include grid-width();
+    }
     &:first-of-type {
       padding: 0 $indent*4;
+    }
+    & .card {
+      padding-right: $indent * 5;
     }
   }
 }
@@ -53,27 +63,20 @@
 .grid__col--12 {
   @include flex($dir: column);
   @include mq('desktop') {
-    @include flex($dir: row, $just: space-between);
+    @include flex($dir: row, $just: space-around);
+    & nav .nav {
+      @include flex($dir: row);
+    }
+    &  .btn--info {
+      margin-right: $indent*4;
+    }
   }
 }
 
 .grid__col--9 {
-  & nav .nav {
-      @include mq('desktop') {
-        @include flex($dir: row);
-      }
-  }
+  justify-content: center;
 }
-
-
 
 .centered {
-  //text-align: center;
+  justify-content: center;
 }
-
-.theme__colors {
-
-}
-// {
-// @include btn-color($color-themes);
-// }

@@ -7,6 +7,7 @@
   @import url($font-url--google);
 }
 
+// px to em
 @function em($target, $context: $base__font-size) {
   @return ($target / $context) * 1em;
 }
@@ -14,6 +15,5 @@
 
 // cols
 @function col-width($col) {
-  @return (12/10*$col);
+  @return percentage($col/12);
 }
-// Buttons

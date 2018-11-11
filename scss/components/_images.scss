@@ -17,7 +17,10 @@
 .img--frame {
   border: 1px solid $grey;
   padding: $indent;
-  margin-bottom: $indent;
+  margin-bottom: $indent * 2;
+  @include mq('desktop') {
+    margin: auto;
+  }
 }
 
 .img--avatar {
@@ -25,6 +28,6 @@
   margin: auto;
   padding: 1em 0 2em 0;
   @include mq('desktop') {
-      width: 60%;
+      width: 170px;
   }
 }
