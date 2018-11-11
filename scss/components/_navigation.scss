@@ -15,7 +15,7 @@
     }
   }
   @include mq('desktop') {
-    margin-left: 10px;
+    margin-left: $indent;
     margin-top: $indent;
     padding: 0 $indent;
   }

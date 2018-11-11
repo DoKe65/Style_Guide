@@ -36,13 +36,16 @@
     width: 100%;
   }
   @include mq('desktop') {
-    @include flex($dir: row, $just: space-between);
+    @include flex($dir: row, $just: space-around);
     width: 100%;
     @for $i from 2 through 12 {
       @include grid-width();
     }
     &:first-of-type {
-      padding: 0 $indent*4;
+      & .grid__col--9,
+      & .grid__col--3 {
+        justify-content: center;
+      }
     }
     & .card {
       padding-right: $indent * 5;
@@ -63,7 +66,7 @@
 .grid__col--12 {
   @include flex($dir: column);
   @include mq('desktop') {
-    @include flex($dir: row, $just: space-around);
+    @include flex($dir: row);
     & nav .nav {
       @include flex($dir: row);
     }
@@ -71,10 +74,6 @@
       margin-right: $indent*4;
     }
   }
-}
-
-.grid__col--9 {
-  justify-content: center;
 }
 
 .centered {
