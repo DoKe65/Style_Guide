@@ -7,7 +7,3 @@ col {
   margin-left: -$indent;
   margin-right: -$indent;
 }
-
-.grid__col {
-   @include grid-color($color-themes);
-}

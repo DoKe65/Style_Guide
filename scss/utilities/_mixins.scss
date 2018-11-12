@@ -91,9 +91,6 @@
       margin: $indent 0;
       @include mq('desktop') {
         margin: $indent/2;
-        // &.centered {
-        //   margin: auto;
-        // }
       }
     }
   }
