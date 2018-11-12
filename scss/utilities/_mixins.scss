@@ -42,7 +42,7 @@
   align-items: $algn;
 }
 
-// Grids mixin mit for um die breite mit hilfe von der funktion col-width zu berechnen
+// Grids
 @mixin grid-width() {
   @for $i from 2 through 12 {
     .grid__col--#{$i} {
