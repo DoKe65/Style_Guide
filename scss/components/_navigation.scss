@@ -8,7 +8,7 @@
     text-decoration: none;
     @include font('reg', $grey);
   }
-  &:first-of-type {
+  &:hover {
     background-color: $color_primary;
     & a {
       color: $white;

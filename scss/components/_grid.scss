@@ -77,6 +77,12 @@
   }
 }
 
+.theme__colors {
+  @include mq('desktop') {
+    justify-content: center;
+  }
+}
+
 .centered {
   justify-content: center;
 }
